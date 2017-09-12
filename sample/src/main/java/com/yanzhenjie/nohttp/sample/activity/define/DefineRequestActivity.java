@@ -55,7 +55,7 @@ public class DefineRequestActivity extends BaseActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_fast_json: {
+            case R.id.btn_fast_json: {//自定义请求fastjson
                 // 这里用的demo自定义的FastJsonRequest解析服务器的json。
                 Request<JSONObject> request = new FastJsonRequest(Constants.URL_NOHTTP_JSONOBJECT, RequestMethod.GET);
                 request.add("name", "yanzhenjie");
@@ -63,7 +63,7 @@ public class DefineRequestActivity extends BaseActivity implements View.OnClickL
                 request(0, request, jsonHttpListener, false, true);
                 break;
             }
-            case R.id.btn_java_bean: {
+            case R.id.btn_java_bean: {//自定义请求javabean
                 // 这里用的是demo自定义的JavaBeanRequest对象对请求，里面用fastjson解析服务器的数据。
                 Request<YanZhenjie> request = new JavaBeanRequest<>(Constants.URL_NOHTTP_JSONOBJECT, YanZhenjie.class);
                 request.add("name", "yanzhenjie");

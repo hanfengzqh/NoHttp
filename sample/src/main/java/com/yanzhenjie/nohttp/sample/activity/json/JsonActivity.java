@@ -52,12 +52,12 @@ public class JsonActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_object_reqeust) {
+        if (v.getId() == R.id.btn_object_reqeust) {//jsonobject对象
             Request<JSONObject> request = NoHttp.createJsonObjectRequest(Constants.URL_NOHTTP_JSONOBJECT);
             request.add("name", "yanzhenjie");
             request.add("pwd", 123);
             request(0, request, objectListener, true, true);
-        } else if (v.getId() == R.id.btn_array_request) {
+        } else if (v.getId() == R.id.btn_array_request) {//jsonarray对象
             Request<JSONArray> request = NoHttp.createJsonArrayRequest(Constants.URL_NOHTTP_JSONARRAY);
             request.add("name", "yanzhenjie");
             request.add("pwd", 123);

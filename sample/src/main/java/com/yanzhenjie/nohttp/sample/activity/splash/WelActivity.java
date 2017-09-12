@@ -35,6 +35,7 @@ public class WelActivity extends AppCompatActivity implements Runnable {
         setContentView(R.layout.activity_wel);
 
         AppConfig.getInstance().initialize();
+        //发送延迟消息更新界面
         getWindow().getDecorView().postDelayed(this, 2000);
     }
 

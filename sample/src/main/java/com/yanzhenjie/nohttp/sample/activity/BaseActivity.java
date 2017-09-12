@@ -264,5 +264,4 @@ public abstract class BaseActivity extends AppCompatActivity {
         imageDialog.setImage(bitmap);
         imageDialog.show();
     }
-
 }
